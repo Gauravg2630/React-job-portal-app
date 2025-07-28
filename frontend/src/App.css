@@ -1,0 +1,250 @@
+/* Reset some basics */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+body {
+  background-color: #f9fafb;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1e40af; /* Indigo-700 */
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-user {
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: #bfdbfe; /* Indigo-300 */
+  margin-left: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+  color: #60a5fa; /* Indigo-400 */
+}
+
+.btn-logout {
+  background-color: #ef4444; /* Red-500 */
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #dc2626; /* Red-600 */
+}
+
+/* Form Container */
+.form-container {
+  background: white;
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-container h2 {
+  margin-bottom: 1.5rem;
+  color: #1e3a8a; /* Indigo-900 */
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1.3rem;
+  border: 1.8px solid #cbd5e1; /* Slate-300 */
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb; /* Blue-600 */
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  background-color: #2563eb; /* Blue-600 */
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #93c5fd; /* Blue-300 */
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #1e40af; /* Indigo-900 */
+}
+
+/* Error and Success Messages */
+.error-msg {
+  background-color: #fee2e2; /* Red-100 */
+  color: #b91c1c; /* Red-700 */
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.success-msg {
+  background-color: #dcfce7; /* Green-100 */
+  color: #166534; /* Green-800 */
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Job List */
+.job-list-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.job-list-container h2 {
+  color: #1e40af;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.job-list {
+  list-style: none;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.job-item {
+  background: white;
+  padding: 1.5rem 1.8rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e7ff; /* Indigo-100 */
+  transition: box-shadow 0.3s ease;
+}
+
+.job-item:hover {
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+}
+
+.job-item h3 {
+  color: #1e3a8a;
+  margin-bottom: 0.6rem;
+}
+
+.job-item p {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  color: #4b5563; /* Gray-600 */
+}
+
+.job-item button {
+  margin-top: 1rem;
+  background-color: #2563eb;
+  width: 100%;
+}
+
+.job-item button:hover {
+  background-color: #1e40af;
+}
+
+/* Spinner */
+.spinner {
+  margin: 3rem auto;
+  border: 6px solid #e5e7eb; /* Gray-200 */
+  border-top: 6px solid #2563eb;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .job-list {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-link, .btn-logout {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
