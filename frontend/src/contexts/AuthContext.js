@@ -1,7 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const AuthContext = createContext();
-const API_URL = 'http://localhost:4000/api/auth';
+const API_URL = 'https://react-job-portal-app-backend.onrender.com/api/auth';
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
