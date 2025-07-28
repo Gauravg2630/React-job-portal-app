@@ -10,7 +10,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3000',  // React frontend
+  origin: 'https://react-job-portal-app-backend.onrender.com',  // React frontend
   credentials: true,                // Allow cookies to be sent
 }));
 app.use(cookieParser());            // Parse cookies
